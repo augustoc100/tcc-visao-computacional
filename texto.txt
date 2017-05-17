@@ -1,0 +1,13 @@
+foi usado na programação deste sw, o paradigma de programação OO (orientado a objeto)
+
+Linguagem utilizada:
+	Python.
+
+as bibliotecas:
+	kivy: uma biblioteca de interface (ui) multplataforma para a linguagem de programação python
+	SimpleCV: é um conjunto de bibliotecas que visa abstrair a dificuldade de se programar para visão computacional.
+		algumas bibliotecas que integram o SimpleCV
+			numpy: biblioteca que visa melhora de desempenho e facilidade de uso 
+			syspy: biblioteca ultilizada para processamento de dados. 
+			pygame: biblioteca que é utilizada para a mostragem e manipulação da interface da camera.
+			opencv : biblioteca para visão computacional

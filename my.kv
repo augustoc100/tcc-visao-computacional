@@ -1,0 +1,110 @@
+
+
+<FirstPage@GridLayout>:
+	cols:2
+	custom: 'Hello world'
+
+	GridLayout:
+		rows:2
+
+		GridLayout:
+			cols: 4
+
+			CheckBox:
+				group:"color"
+				id:verde
+				on_active: root.activate()
+			Label:
+				text:"Verde"
+
+			CheckBox:
+				group:"color"
+				id:vermelho
+				active: True
+
+				on_active: root.activate()
+
+			Label:
+				text:"Vermelho"
+
+
+			CheckBox:
+				group:"geometry"
+				id:retangulo
+				on_active: root.activate()
+
+
+			Label:
+				text:"Retangulo"
+
+			CheckBox:
+				group:"geometry"
+				id:circulo
+				active:True
+				
+				on_active: root.activate()
+
+			Label:
+				text:"Circulo"
+
+		
+			
+		FloatLayout:
+			Button:
+				text:"[size=30]Iniciar[/size]"
+				markup:True
+				size_hint: .7,.3
+				pos_hint: {"x":.3,"y":.6}
+				background_color:(0,0,250,.6)
+				on_press: root.iniciar() 
+
+			Button:
+				text:"[size=30]Parar[/size]"
+				pos_hint: {"x":.3,"y":.2}
+				markup:True
+				on_press: root.parar() 
+
+				size_hint: .7,.3
+				background_color:(255,0,0,.6)
+
+
+
+
+	GridLayout:
+		rows:2
+		FloatLayout:
+			size:(500,500)
+
+			Label:
+				text:"[size=30]Corretos[/size]"
+				pos_hint: {"x":.1,"top":1.}
+				markup:True
+
+			Label:
+				id: lb_certo
+				text:"0"
+				font_size:70
+				pos_hint: {"x":.1,"top":.8}
+
+		FloatLayout:
+			size:(500,500)
+
+			Label:
+				text:"[size=30]errados[/size]"
+				pos_hint: {"x":.1, "y":.2}
+				markup:True
+
+			Label:
+				text:"0"
+				font_size:70
+				id: lb_errado
+
+				pos_hint: {"x":.1, "bottom":0}
+
+				
+
+	
+		
+	        
+
+FirstPage:
