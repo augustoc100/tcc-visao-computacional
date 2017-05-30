@@ -1,17 +1,12 @@
-
-
-
-
 import kivy
-kivy.require('1.0.6') # 
+kivy.require('1.0.6') # replace with your current kivy version !
 
 from kivy.app import App
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.checkbox import CheckBox
 
 from ctrlFirst import CtrlFirst
-
-
+import time
 
 class FirstPage(GridLayout):
 
@@ -50,13 +45,15 @@ class FirstPage(GridLayout):
 		self.ctrl.iniciar(escolhas,lbs)
 
 	def parar(self):
-		for i in range(1000):
+		for i in range(100):
 			ct=self.ids.lb_certo.text
 			lc = int(ct)
 			self.ids.lb_certo.text = str(lc +1 )
-
+			time.sleep(.3)
+			print i
 		print self.ids.lb_certo
-
+		
+		
 class MyApp(App):
 
     def build(self):
